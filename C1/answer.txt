@@ -1,0 +1,15 @@
+B6 - Employees earning more than their department average
+
+Run B6.sql with SQLite. The file creates the employees and departments tables
+using the records in Dataset.csv, then runs the requested query using two CTEs:
+dept_avg and above_avg.
+
+Output:
+
+name    dept_name      salary  avg_salary  pct_above
+Farhan  Data Platform  82000   66000.0     24.24
+Anita   Engineering    90000   75000.0     20.0
+Chetan  Analytics      75000   64000.0     17.19
+
+Hina is not included because she has no department ID. pct_above is the
+percentage by which salary exceeds the department average.
