@@ -1,0 +1,43 @@
+B5 - How an Airflow DAG appears in the UI
+
+When you save a DAG file in the dags folder, Airflow needs to find and read
+it before it can show the DAG in the browser. The flow is:
+
+dags/ folder
+    |
+    v
+DAG processor / scheduler
+    |
+    v
+Metadata database
+    |
+    v
+Webserver
+    |
+    v
+Airflow UI
+
+What each part does:
+
+1. dags/ folder
+   This is where the DAG's Python file is saved. Airflow is configured to
+   look in this folder for DAG files.
+
+2. DAG processor / scheduler
+   It finds and reads the DAG file, checks that it can be parsed, and
+   prepares the DAG information for the rest of Airflow.
+
+3. Metadata database
+   It stores information about the DAG so other Airflow components can
+   retrieve it.
+
+4. Webserver
+   It retrieves the DAG information and makes it available to the browser.
+
+5. Airflow UI
+   This is the page you open in your browser. Once Airflow has successfully
+   read the DAG and stored its information, the DAG can appear here.
+
+The component names and exact flow can vary with the Airflow version and
+deployment setup. In Airflow 3, some of these responsibilities are separated
+into components such as the DAG processor and API server.

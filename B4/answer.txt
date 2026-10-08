@@ -1,0 +1,14 @@
+B4 - Salary charts
+
+The B4.py program reads the employee records from Dataset.csv and creates
+one figure arranged in a single row with two charts:
+
+Left chart: A Seaborn histogram showing the distribution of employee salaries.
+Title: Salary Distribution
+
+Right chart: A Seaborn box plot showing salary grouped by department ID.
+Title: Salary by Department
+
+When B4.py is run, it displays the figure and saves a copy as
+salary_plots.png in this folder. The chart itself is an image, so it cannot
+be represented as plain text; this file describes its layout and titles.

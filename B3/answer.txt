@@ -1,0 +1,15 @@
+B3 - Highest-paid employee in each department
+
+Pandas one-liner using idxmax:
+
+emp.loc[emp.groupby("dept_id")["salary"].idxmax(), ["dept_id", "name", "salary"]]
+
+Output:
+
+ dept_id   name  salary
+      10  Anita   90000
+      20 Chetan   75000
+      30 Farhan   82000
+
+The runnable code is in B3.py. It reads the employee records from Dataset.csv.
+Employees without a department ID are not included in this department-wise result.
